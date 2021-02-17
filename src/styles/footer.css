@@ -1,0 +1,89 @@
+footer{
+    font-family: var(--content-ff);
+    font-size: 1.1rem;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer a{
+    color: var(--white);
+}
+
+.social_media li{
+    display: inline-block;
+    padding: 10px;
+}
+
+footer p{
+    color: var(--very-dark-gray);
+}
+
+.attribution a{
+    color: var(--dark-gray);
+    text-decoration: underline;
+}
+
+/*----- MOBILE ------*/
+@media screen and (max-width: 800px){
+
+    footer{
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer div:first-child{
+        width: 50%;
+    }
+
+    .social_media{
+        margin: 0 auto;
+    }
+
+    footer div:last-child{
+        margin-top: 1em;
+    }
+}
+
+/*----- DESKTOP ------*/
+@media screen and (min-width: 801px){
+
+    footer{
+        justify-content: space-between;
+        align-items: flex-end;   
+    }
+
+    footer .links li:not(.social_media li){
+        display: block;
+    }
+
+    footer div:last-child{
+        text-align: right;
+    }
+
+    @media screen and (min-width: 1150px){
+
+        footer{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+         
+        }
+        
+        footer .links li:not(.social_media li){
+            display: inline-block;
+        }
+
+        footer div:last-child{
+            text-align: right;
+        }
+
+        .loopstudios_logo_footer{
+            display: left;
+            padding-left: 7px;
+            margin-left: 7px;
+        }
+    }
+    
+}

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+:root{
+    /*  fonts   */
+    --headings-ff: 'Josefin Sans', sans-serif;
+    --content-ff: 'Alata', sans-serif;
+    /*  colors  */
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--headings-ff);
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a, a:visited{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.links a{
+    position: relative;
+}
+
+.links a::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.links a:hover::after{
+    border-bottom: 2px solid white;
+}
+
+
+/*----- MOBILE ------*/
+@media screen and (max-width: 700px){
+    
+    body{
+        min-width: 325px;
+        font-size: 110%;
+    }
+
+    header, section, footer{
+        padding: 5%;
+    }
+
+    .links li:not(.social_media li){
+        display: block;
+        padding: .5em;
+        width: 100%;
+    }
+}
+
+/*----- DESKTOP ------*/
+@media screen and (min-width: 701px){
+
+    body{
+        max-width: 1440px;
+        font-size: 130%;
+    }
+    
+    header, section, footer{
+        padding: 4% 10%;
+    }
+
+    .links li{
+        display: inline-block;
+        padding: 7px;
+        font-family: var(--content-ff);
+        font-size: 1.1rem;
+    }
+
+    .links a{
+        color: var(--white);
+    }
+
+    @media screen and (min-width: 900px){
+        
+        .links li{
+            margin: 8px;
+            font-size: 1.2rem;
+        }
+    }
+    
+}
+
+

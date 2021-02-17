@@ -1,0 +1,136 @@
+.creations{
+    position: relative;
+    padding-bottom: 15%;
+}
+
+.creations_imgs{
+    display: flex;
+    position: relative;
+}
+
+.creations_imgs button{
+    position: absolute;
+    font-family: var(--headings-ff);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .3s ease-out;
+}
+
+    .creations_imgs button:hover{
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+.creations_imgs > picture{
+    position: relative;  
+    margin-top: .7em;
+    margin-bottom: .7em; 
+}
+
+.creations_imgs img{
+    width: 100%;
+}
+
+picture > div{
+    position: absolute;
+    top: 0;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    transition: all .6s ease-out;
+}
+
+    picture > div:hover{
+        background-image: none;
+        background-color: rgba(255, 255, 255, 0.6);
+        color: var(--black);
+    }
+
+.creations h2{
+    margin-bottom: 6%;
+}
+
+picture p{
+    position: absolute;
+    left: .9em;
+    bottom: .9em;
+    max-width: 170px;
+    font-family: var(--headings-ff);
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/*----- MOBILE ------*/
+@media screen and (max-width: 700px){
+
+    .creations{
+        margin-bottom: 10%;
+    }
+
+    .creations_imgs{
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    picture > div{
+        background-image: linear-gradient(to top, rgba(0, 0, 0, .9), rgba(255, 255, 255, 0));
+    }
+
+    picture p{
+        font-size: 1.5rem;
+    }
+
+    .creations_imgs button{
+        padding: .7em 1.4em;
+        bottom: -4%;
+        left: 37%;
+        font-size: 1rem;
+        letter-spacing: 3px;
+        z-index: 100;
+    }
+
+    @media screen and (max-width: 425px){
+
+        .creations_imgs button{
+            padding: .5em 1em;
+            bottom: -3%;
+            left: 30%;
+        }
+
+        .creations h2{
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+/*----- DESKTOP ------*/
+@media screen and (min-width: 701px){
+
+    .creations_imgs{
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .creations h2{
+        font-size: 2.7rem;
+    }
+
+    .creations_imgs button{
+        padding: .6em 1.3em;
+        top: -5em;
+        right: 0;
+        font-size: 1rem;
+        letter-spacing: 3px;
+    }
+    
+    picture > div{
+        background-image: linear-gradient(to right, rgba(0, 0, 0, .9), rgba(255, 255, 255, 0));
+    }
+
+    picture p{
+        font-size: 1.7rem;
+    }
+}

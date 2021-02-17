@@ -1,0 +1,89 @@
+.interactive{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.interactive :is(h3, p){
+    text-align: center;
+}
+
+.interactive > div{
+    max-width: 400px;
+    background-color: var(--white);
+}
+
+.interactive h3{
+    margin-bottom: .4em;
+}
+
+.interactive p{
+    font-family: var(--content-ff);
+    color: var(--dark-gray);
+}
+
+/*----- MOBILE ------*/
+@media screen and (max-width: 700px){
+
+    section{
+        padding: 5%;
+    }
+    
+    .interactive{
+        flex-flow: row wrap;
+    }
+
+    .interactive img{
+        width: 100%;
+    }
+
+    .interactive h3{
+        font-size: 2.5rem;
+    }
+
+    .interactive > div{
+        padding: 10%
+    }
+    
+}
+
+/*----- DESKTOP ------*/
+@media screen and (min-width: 701px){
+
+    .interactive{
+        flex-flow: row wrap;
+    }
+
+    .interactive > div{
+        padding: 4em;
+    }
+
+    .interactive h3{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .interactive p{
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1200px){
+
+        .interactive{
+            justify-content: flex-start;
+            position: relative;
+            margin-bottom: 10%;
+        }
+
+        .interactive img{
+            width: 70%;
+        }
+
+        .interactive > div{
+            position: absolute;
+            bottom: -20%;
+            right: 10%;
+        }
+    }
+}
+
